@@ -1,14 +1,12 @@
 import sys
-from monitor.monitor_virtual import MonitorVirtual
-from camera_feed import CameraFeed
+from cam.camera_feed import CameraFeed
 from PyQt5.QtWidgets import QApplication
 
 
 
+# Main
 if __name__ == "__main__":
-    import sys
-    from PyQt5.QtWidgets import QApplication
-
     app = QApplication(sys.argv)
-    camera = CameraFeed()
+    window = CameraFeed()
+    window.show()
     sys.exit(app.exec_())
